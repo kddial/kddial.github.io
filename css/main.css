@@ -108,9 +108,18 @@ body {
   background-color: #FFE9DE;
 }
 
+.description {
+	font-size: 1.35rem;
+}
 
 
+.kd_title {
+	letter-spacing: 0.9px;
+}
 
+i {
+	margin-right: 5px;
+}
 
 /* ==========================================================================
    Helper classes
