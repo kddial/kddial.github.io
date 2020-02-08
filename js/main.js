@@ -62,7 +62,7 @@ const getTotalViewCount = () => {
       }
     })
     .then(responseText => {
-      const totalViewCountString = `Total view count: ${responseText}`;
+      const totalViewCountString = `${responseText} page views`;
       console.log(totalViewCountString);
       $('#view-count').html(totalViewCountString);
     })
