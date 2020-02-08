@@ -42,3 +42,32 @@ const addToViewCounter = () => {
     }
   }
 };
+
+const getTotalViewCount = () => {
+  const url =
+    'https://mn7724hpl4.execute-api.ca-central-1.amazonaws.com/Prod/views';
+
+  fetch(url, {
+    method: 'GET',
+    mode: 'cors',
+    headers: {
+      'Content-Type': 'text/plain',
+    },
+  })
+    .then(response => {
+      if (response.status === 200 || response.status === '200') {
+        if (response.text) {
+          return response.text();
+        }
+      }
+    })
+    .then(responseText => {
+      const totalViewCountString = `Total view count: ${responseText}`;
+      console.log(totalViewCountString);
+      $('#view-count').html(totalViewCountString);
+    })
+    .catch(error => {
+      console.log('Error reading total view count', error);
+    });
+};
+getTotalViewCount();
