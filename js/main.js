@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  getTotalViewCount();
   addToViewCounter();
 });
 
@@ -70,4 +71,3 @@ const getTotalViewCount = () => {
       console.log('Error reading total view count', error);
     });
 };
-getTotalViewCount();
